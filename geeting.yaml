@@ -1,0 +1,14 @@
+name: 'Display Message'
+on: [workflow_dispatch]
+jobs:
+  Job1-Message-Ubuntu-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Welcome to Ubuntu"
+      - run: ls ~
+      - run: pwd
+      - run: echo "Git OS is ${{runner.os}}"
+  Job2-Message-Windows-Actions:
+    runs-on: windows-latest
+    steps:
+      - run: echo "Welcome to Windows"
